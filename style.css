@@ -1,0 +1,235 @@
+#NDbutton {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  width:60px;
+  height: 30px;
+  margin-bottom: 30px;
+
+}
+
+#Header {
+  position: fixed;
+  top:0px;
+  height: 120px;
+  width: 100%;
+  z-index: 1;
+}
+
+#grid {
+  margin-top: 130px;
+  display:grid;/*그리드를 사용하기 위한 필수 작성*/
+  grid-template-columns:200px 1fr;
+  border-top:1px solid gray;
+  height: 100%;
+
+}
+
+#age{
+  padding-top:20px;
+  padding-left:20px;
+  padding-right: 20px;
+}
+
+#now {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+body{
+  margin:0;
+  z-index: -1;
+  background-color: white;
+  animation: fadeIn 0.3s linear;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+li{
+  padding-top: 10px;
+}
+
+h1 {
+
+  font-size:40px;
+  text-align: center;
+  margin:0;
+  padding:30px;
+}
+#contents {
+  border-right:1px solid gray;
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+#grid #contents ul  { /*모든 ol태그 중 조상이 grid인 od태그만 선택자가 됨 */
+
+  margin:0;
+  padding-top:20px;
+  padding-left:30px;
+  padding-right:30px;
+  text-align: center;
+
+}
+#age h2 {
+  margin:0;
+}
+
+.demo-gallery > ul > li {
+    float: left;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    width: 48%;
+}
+
+@media(max-width:757px) {
+  .demo-gallery > ul > li {
+
+  }
+}
+@media(max-width:601px) {
+  #grid {
+    display:block;
+  }
+  #contents {
+    border-right: none;
+  }
+
+  }
+
+  #grid ul { /*모든 ol태그 중 조상이 grid인 od태그만 선택자가 됨 */
+    border-right:none;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  h1 {
+    border-bottom:none;
+  }
+}
+
+.demo-gallery > ul {
+  margin-bottom: 0;
+}
+.demo-gallery > ul > li a {
+
+  border-radius: 3px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+.demo-gallery > ul > li a > img {
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+.demo-gallery > ul > li a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+  opacity: 1;
+}
+.demo-gallery > ul > li a .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s;
+}
+.demo-gallery > ul > li a .demo-gallery-poster > img {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+.demo-gallery > ul > li a:hover .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.demo-gallery .justified-gallery > a > img {
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+.demo-gallery .justified-gallery > a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+  opacity: 1;
+}
+.demo-gallery .justified-gallery > a .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s;
+}
+.demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+.demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.demo-gallery .video .demo-gallery-poster img {
+  height: 48px;
+  margin-left: -24px;
+  margin-top: -24px;
+  opacity: 0.8;
+  width: 48px;
+}
+.demo-gallery.dark > ul > li a {
+  border: 3px solid #04070a;
+}
+.home .demo-gallery {
+  padding-bottom: 80px;
+}
